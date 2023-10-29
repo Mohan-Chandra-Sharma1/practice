@@ -1,0 +1,89 @@
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom, #f2f4f8, #cfd9e1); /* Background gradient */
+  background-size: cover; /* Cover the entire viewport */
+  background-attachment: fixed; /* Fixed background position */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Space between logo and h1 */
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px; /* Set the appropriate width */
+  height: auto;
+  margin-right: 10px;
+}
+
+.App-header h1 {
+  margin: 0;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.App-main {
+  padding: 20px;
+}
+
+.sign-up-container {
+  margin-bottom: 20px;
+}
+
+.sign-up-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.content-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+}
+
+/* Add styles for the moving vehicle */
+.vehicle {
+  position: absolute;
+  font-size: 80px; /* Adjust the font size as needed */
+  transform: translateX(100%);
+  bottom: 0;
+  transition: right 0.5s linear;
+  animation: moveVehicle 16s linear infinite;
+}
+
+@keyframes moveVehicle {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%); /* Updated to move from right to left */
+  }
+}
+
+/* Add more global styles here */
